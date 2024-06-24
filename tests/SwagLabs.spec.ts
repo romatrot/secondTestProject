@@ -4,6 +4,7 @@ import { SwagLabsProductsPage } from '../pages/SwagLabsProductsPage.spec';
 import { TheInternetHerokuappPage } from '../pages/TheInternetHerokuappPage.spec';
 import { basicAuth } from '../pages/component/basicAuth.spec';
 import { UltimateqaPage } from '../pages/UltimateqaPage.spec';
+import { GoodTasks } from '../pages/GoodTasks.spec';
 
 test('Swag Labs first test',async({page})=>{
     const swagLabsRegistrationPage = new SwagLabsRegistrationPage(page);
@@ -48,4 +49,10 @@ test("Ultimateqa",async ({page})=>{
     await ultimateqaPage.verifyLabel();
     await ultimateqaPage.verifyInsideOfToggle();
     await ultimateqaPage.fillWrongAToggleValues("Roma","roma","hi","1");
+})
+
+test('Good tasks',async({page})=>{
+    const goodTasks = new GoodTasks;
+    console.log(await goodTasks.WordBack("Hello"));
+    console.log(await goodTasks.RandomNumder(8));
 })
